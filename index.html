@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#163bce"><meta name="description" content="Founder OS: je dagelijkse werkplek voor focus, producten, beslissingen en weekreviews. Met lokale opslag en een privé-import uit Founder Brain.">
+<title>Founder OS — ruimte voor het echte werk</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Naar inhoud</a>
+<aside class="sidebar">
+<a class="brand" href="#today"><span class="brandmark">f<span>o</span></span><span>Founder <b>OS</b><small>Een bedrijf. Eén werkplek.</small></span></a>
+<div class="workspace"><span class="avatar">F</span><span>Mijn workspace<small>Persoonlijk · lokaal opgeslagen</small></span></div>
+<nav aria-label="Hoofdnavigatie">
+<a href="#today" data-page="today"><span aria-hidden="true">◫</span> Vandaag</a>
+<a href="#portfolio" data-page="portfolio"><span aria-hidden="true">▦</span> Portfolio</a>
+<a href="#decisions" data-page="decisions"><span aria-hidden="true">◇</span> Beslissingen</a>
+<a href="#review" data-page="review"><span aria-hidden="true">↺</span> Weekreview</a>
+<a href="#guide" data-page="guide"><span aria-hidden="true">☷</span> Handleiding</a>
+</nav>
+<div class="sidebar-bottom"><div class="local-dot"></div><span>Jouw browser is je workspace<small>Geen account of cloudsync</small></span></div>
+</aside>
+<div class="shell"><header class="topbar"><span id="breadcrumb">Workspace / Vandaag</span><div class="top-actions"><button class="quiet" id="import-btn">Importeren</button><button class="quiet" id="export-btn">Back-up downloaden</button><span class="profile" aria-label="Persoonlijke workspace">F</span></div></header>
+<main id="main" tabindex="-1"></main>
+<footer>Founder OS <span>Meer focus. Minder losse eindjes.</span><a href="#guide">Over je gegevens</a></footer></div>
+<input id="file-input" type="file" accept=".json,application/json" hidden>
+<dialog id="task-dialog"><form id="task-form"><div class="dialog-heading"><h2>Een volgende stap</h2><button type="button" class="quiet" data-close aria-label="Sluiten">✕</button></div><label>Wat ga je doen?<input name="title" required maxlength="160" placeholder="Bijvoorbeeld: drie klantgesprekken plannen"></label><label>Product<select name="product" id="task-product"></select></label><label>Deadline<input name="due" type="date" required></label><label>Prioriteit<select name="priority"><option value="normal">Normaal</option><option value="high">Hoog</option></select></label><button class="primary" type="submit">Taak toevoegen</button></form></dialog>
+<dialog id="decision-dialog"><form id="decision-form"><div class="dialog-heading"><h2>Leg je afweging vast</h2><button type="button" class="quiet" data-close aria-label="Sluiten">✕</button></div><label>Beslissing<input name="title" required maxlength="160"></label><label>Context en afweging<textarea name="context" required maxlength="3000" rows="4"></textarea></label><label>Herbekijken op<input name="due" type="date" required></label><button class="primary" type="submit">Beslissing bewaren</button></form></dialog>
+<dialog id="import-dialog"><h2>Workspace vervangen?</h2><p>Dit vervangt je huidige taken, focus en reviews door het gekozen bestand. Download eerst een back-up als je die wilt bewaren.</p><div class="button-row"><button class="quiet" data-close>Annuleren</button><button class="primary" id="confirm-import">Vervangen</button></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript><p>Schakel JavaScript in om Founder OS te gebruiken. Je gegevens blijven in je eigen browser.</p></noscript>
+</body></html>
