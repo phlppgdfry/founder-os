@@ -25,6 +25,7 @@ jobs:
       - name: Validate JavaScript and stage public app only
         run: |
           node --check app.js
+          node --test contract.test.cjs
           mkdir _site
           cp index.html app.js style.css favicon.svg .nojekyll _site/
       - uses: actions/configure-pages@v5

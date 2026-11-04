@@ -13,6 +13,7 @@
 <div class="workspace"><span class="avatar">F</span><span>Mijn workspace<small>Persoonlijk · lokaal opgeslagen</small></span></div>
 <nav aria-label="Hoofdnavigatie">
 <a href="#today" data-page="today"><span aria-hidden="true">◫</span> Vandaag</a>
+<a href="#github" data-page="github"><span aria-hidden="true">⌘</span> GitHub</a>
 <a href="#portfolio" data-page="portfolio"><span aria-hidden="true">▦</span> Portfolio</a>
 <a href="#decisions" data-page="decisions"><span aria-hidden="true">◇</span> Beslissingen</a>
 <a href="#review" data-page="review"><span aria-hidden="true">↺</span> Weekreview</a>
@@ -26,7 +27,7 @@
 <input id="file-input" type="file" accept=".json,application/json" hidden>
 <dialog id="task-dialog"><form id="task-form"><div class="dialog-heading"><h2>Een volgende stap</h2><button type="button" class="quiet" data-close aria-label="Sluiten">✕</button></div><label>Wat ga je doen?<input name="title" required maxlength="160" placeholder="Bijvoorbeeld: drie klantgesprekken plannen"></label><label>Product<select name="product" id="task-product"></select></label><label>Deadline<input name="due" type="date" required></label><label>Prioriteit<select name="priority"><option value="normal">Normaal</option><option value="high">Hoog</option></select></label><button class="primary" type="submit">Taak toevoegen</button></form></dialog>
 <dialog id="decision-dialog"><form id="decision-form"><div class="dialog-heading"><h2>Leg je afweging vast</h2><button type="button" class="quiet" data-close aria-label="Sluiten">✕</button></div><label>Beslissing<input name="title" required maxlength="160"></label><label>Context en afweging<textarea name="context" required maxlength="3000" rows="4"></textarea></label><label>Herbekijken op<input name="due" type="date" required></label><button class="primary" type="submit">Beslissing bewaren</button></form></dialog>
-<dialog id="import-dialog"><h2>Workspace vervangen?</h2><p>Dit vervangt je huidige taken, focus en reviews door het gekozen bestand. Download eerst een back-up als je die wilt bewaren.</p><div class="button-row"><button class="quiet" data-close>Annuleren</button><button class="primary" id="confirm-import">Vervangen</button></div></dialog>
+<dialog id="import-dialog"><h2>Gegevens inladen</h2><p id="import-summary"></p><label>Wat wil je doen?<select id="import-choice"><option value="refresh">Brongegevens verversen, mijn werk behouden</option><option value="replace">Workspace volledig vervangen</option></select></label><p>Verversen bewaart je taken, focus, beslislogboek, volglijst en weekreviews. Nieuwe brongegevens worden toegevoegd. Vervangen herstelt precies het gekozen bestand. Download bij twijfel eerst een back-up.</p><div class="button-row"><button class="quiet" data-close>Annuleren</button><button class="primary" id="confirm-import">Inladen</button></div></dialog>
 <div id="toast" role="status" aria-live="polite"></div>
 <noscript><p>Schakel JavaScript in om Founder OS te gebruiken. Je gegevens blijven in je eigen browser.</p></noscript>
 </body></html>
